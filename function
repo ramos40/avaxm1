@@ -1,0 +1,21 @@
+//1.SPDX-License-Identifier: MIT
+pragma solidity ^0.8.9;
+contract avalanchemodule1{
+    
+    function REQUIRE(uint256 X, uint Y)public pure returns(uint){
+        uint Z=X + Y;
+        require(Z==50,"Z should be equal to 50");
+        return Z;
+    }
+    function REVERT(uint Z)public pure{
+        if(Z*Z%2!=0){
+            revert("Number is Odd");
+        }
+        
+    }
+    function ASSERT(uint256 X, uint256 Y)public pure returns(uint){
+        assert(X**Y>100);
+        return X**Y;
+    }
+    
+}
